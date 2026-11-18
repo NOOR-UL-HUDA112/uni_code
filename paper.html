@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 1</title>
+</head>
+<body>
+  <p id="text">Hello Class</p>
+  <button id="btn">Change Text</button>
+ 
+  <script>
+    let text = document.getElementById("text");
+    let button = document.getElementById("btn");
+ 
+    button.addEventListener("click", function () {
+      text.textContent = "Welcome to JavaScript";
+    });
+  </script>
+</body>
+</html>

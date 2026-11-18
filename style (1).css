@@ -1,0 +1,203 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fafafa;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.lecture-section {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 20px;          /* space INSIDE the border */
+  margin-bottom: 30px;    /* space OUTSIDE the border */
+}
+
+/* Big title for each lecture */
+.lecture-title {
+  color: #4a1d6b;
+  border-bottom: 3px solid #b3126b;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+/* Smaller title for each practical inside a lecture */
+.sub-title {
+  color: #333333;
+  margin-top: 25px;
+  font-size: 1.2rem;
+}
+
+
+/* =====================================================
+   LECTURE 1 : HTML & CSS BASICS
+   ===================================================== */
+
+/* ---------- CSS BOX MODEL ----------
+   Every HTML element is a box with 4 layers:
+   Content -> Padding (space between content and border)
+           -> Border  (wraps padding + content)
+           -> Margin  (space between this element and others) */
+.box-model-demo {
+  color: darkgreen;
+  border: 3px solid orange;   /* Border layer */
+  padding: 15px;              /* Padding layer */
+  margin: 20px;               /* Margin layer */
+  background-color: #fff8e1;
+}
+
+/* ---------- BLOCK ELEMENTS ----------
+   <div> is block-level: starts on a new line and takes full width by default */
+.block-demo {
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+
+/* ---------- INLINE ELEMENTS ----------
+   <span> is inline: stays in the line and takes only the width it needs */
+.inline-demo {
+  background-color: yellow;
+  padding: 2px 6px;
+}
+
+/* ---------- DEMO ACTIVITY: Hobby page (colors, fonts, spacing) ---------- */
+.hobby-card {
+  background-color: #f3e5f5;
+  border: 2px solid purple;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+  max-width: 500px;
+}
+
+.hobby-heading {
+  color: purple;
+  font-family: Georgia, serif;     /* font */
+  letter-spacing: 1px;
+}
+
+.hobby-text {
+  color: #444444;
+  font-size: 16px;
+  line-height: 1.6;                /* spacing between lines */
+}
+
+.hobby-list {
+  color: darkblue;
+  font-weight: bold;
+}
+
+
+/* =====================================================
+   LECTURE 2 : TABLES, FORMS, GRID
+   ===================================================== */
+
+/* ---------- TABLE STYLING TIP (exact code from the slides) ----------
+   border-collapse: collapse -> merges double borders into a single line
+   width: 100%               -> table fills the available width */
+.plain-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Style every header cell (th) and data cell (td) */
+.plain-table th,
+.plain-table td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Header row gets its own background */
+.plain-table th {
+  background-color: #eeeeee;
+}
+
+/* Table caption */
+.plain-table caption {
+  caption-side: top;
+  font-weight: bold;
+  padding: 5px;
+}
+
+/* ---------- Basic HTML form styling ---------- */
+.plain-form {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 450px;
+}
+
+/* ---------- Grid demo boxes ----------
+   Just to SEE the columns: border + background + padding */
+.grid-box {
+  background-color: #e8eaf6;
+  border: 1px solid #7986cb;
+  padding: 15px;
+  text-align: center;
+}
+
+
+/* =====================================================
+   LECTURE 3 : JAVASCRIPT OUTPUT BOX
+   ===================================================== */
+
+/* The box where JS demos print their results (like a mini console) */
+.js-output {
+  background-color: #1e1e1e;       /* dark editor-like background */
+  color: #00e676;                  /* green text */
+  padding: 12px;
+  border-radius: 6px;
+  min-height: 80px;
+  max-height: 300px;
+  overflow-y: auto;                /* scroll when content is long */
+  white-space: pre-wrap;           /* keep line breaks, wrap long lines */
+}
+
+
+/* =====================================================
+   LECTURE 4 : DOM MANIPULATION
+   ===================================================== */
+
+/* Container for each DOM demo */
+.dom-box {
+  border: 1px dashed #999999;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* ---------- .highlight ----------
+   This class is ADDED / REMOVED by JavaScript (classList.toggle("highlight")).
+   Best practice: change styles with classes instead of many inline styles. */
+.highlight {
+  background-color: lightyellow;
+  color: darkred;
+  padding: 5px;
+  border-left: 5px solid orange;
+}
+
+/* Box that reacts to onmouseover (JS changes its background) */
+.hover-box {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  transition: background-color 0.3s;   /* smooth color change */
+}
+
+/* Small spacing between inputs and buttons inside DOM boxes */
+.dom-box input,
+.dom-box button {
+  margin: 4px 2px;
+}
+
+.dom-box img {
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
